@@ -78,8 +78,8 @@ Créditer => Revenus
 Transactions réparties : une transaction est un ensemble de deux ou plus opérations. Une opération est un 4-uplet (compte, débit, crédit, pointé).
 
 Règles : 
-- $\sum{\mathrm{Débits}} = \sum{\mathrm{Crédits}}$
-- Toutes les valeurs de débits et crédits sont $\ge 0$
+- Sommes des débits = Somme des crédits
+- Toutes les valeurs de débits et crédits sont >= 0
 - Une "opération" au sein d'une transaction a soit Débit soit Crédit nul.
 - Une seule opération / compte au sein d'une transaction
 
