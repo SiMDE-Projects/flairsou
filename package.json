@@ -32,6 +32,7 @@
   },
   "dependencies": {
     "@types/express": "^4.17.9",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "ts-dotenv": "^0.8.3"
   }
 }

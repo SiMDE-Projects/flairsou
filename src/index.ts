@@ -1,4 +1,6 @@
 import Server from './server';
 
-const server = new Server(3000);
+import env from './utils/config';
+
+const server = new Server(env.SERVER_PORT);
 server.start();
