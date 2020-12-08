@@ -1,0 +1,26 @@
+{
+  "name": "flairsou",
+  "version": "0.0.0",
+  "description": "Outil de trésorerie des associations de l'UTC",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently -k -n \"Typescript,Node\" -p \"[{name}]\" -c \"blue,green\" \"tsc --watch\" \"nodemon dist/index.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simde-projects/flairsou.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/simde-projects/flairsou/issues"
+  },
+  "homepage": "https://github.com/simde-projects/flairsou#readme",
+  "devDependencies": {
+    "@types/node": "^14.14.10",
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.6",
+    "typescript": "^4.1.2"
+  }
+}
