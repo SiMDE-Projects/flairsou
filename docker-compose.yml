@@ -1,11 +1,22 @@
 version: "3"
 
 services:
+
+  db:
+    image: mariadb
+    environment: 
+      MYSQL_ROOT_PASSWORD: flairsou
+      MYSQL_USER: flairsou
+      MYSQL_PASSWORD: flairsou
+      MYSQL_DATABASE: flairsou
+
   flairsou:
     build: .
+    depends_on: 
+      - db
     container_name: flairsou
     environment: 
-      - "SERVER_PORT=3000"
-      - "DEBUG=flairsou:*"
+      SERVER_PORT: 3000
+      DEBUG: flairsou:*
     ports: 
       - "3000:3000"
