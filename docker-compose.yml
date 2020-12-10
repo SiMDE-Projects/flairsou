@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  flairsou:
+    build: .
+    container_name: flairsou
+    environment: 
+      - "SERVER_PORT=3000"
+      - "DEBUG=flairsou:*"
+    ports: 
+      - "3000:3000"
