@@ -10,11 +10,10 @@ services:
       MYSQL_PASSWORD: flairsou
       MYSQL_DATABASE: flairsou
 
-  flairsou:
+  api:
     build: .
     depends_on: 
       - db
-    container_name: flairsou
     environment: 
       SERVER_PORT: 3000
       DEBUG: flairsou:*
