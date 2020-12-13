@@ -1,7 +1,7 @@
 FROM node:15.3-buster-slim
 LABEL maintainer="pro@remyhuet.fr"
 
-WORKDIR /app
+WORKDIR /srv
 COPY ["package.json", "package-lock.json", "./"]
 RUN npm install
 
