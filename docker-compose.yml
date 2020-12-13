@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+
+  db:
+    image: mariadb
+    environment: 
+      MYSQL_ROOT_PASSWORD: flairsou
+      MYSQL_DATABASE: flairsou
+
+  api:
+    build: .
+    depends_on: 
+      - db
+    environment: 
+      SERVER_PORT: 3000
+      DEBUG: flairsou:*
+    ports: 
+      - "3000:3000"
