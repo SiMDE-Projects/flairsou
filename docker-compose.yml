@@ -14,6 +14,11 @@ services:
       - db
     environment: 
       SERVER_PORT: 3000
+      DB_HOST: localhost
+      DB_PORT: 3306
+      DB_NAME: flairsou
+      DB_USER: root
+      DB_PASSWD: flairsou
       DEBUG: flairsou:*
     ports: 
       - "3000:3000"
