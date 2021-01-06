@@ -1,4 +1,6 @@
-import { ConnectionOptions } from '@mikro-orm/core';
+import {
+  Connection, ConnectionOptions, IDatabaseDriver, Options,
+} from '@mikro-orm/core';
 import env from './utils/config';
 
 const options: ConnectionOptions = {
@@ -10,11 +12,15 @@ const options: ConnectionOptions = {
 };
 
 export interface ConnectionConfig extends ConnectionOptions {
-    type: string
+    type: string,
+    entities: Array<string>,
+    entitiesTs: Array<string>
 }
 
-const config: ConnectionConfig = {
+const config: Options<IDatabaseDriver<Connection>> = {
   type: 'mariadb',
+  entities: ['./dist/entities'],
+  entitiesTs: ['./src/entities'],
   ...options,
 };
 

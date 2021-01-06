@@ -6,9 +6,9 @@
         "target": "es6",
         "strict": true,
         "experimentalDecorators": true,
-        "emitDecoratorMetadata": true,
+        "emitDecoratorMetadata": true
     },
     "include": [
-        "src/**/*",
-    ],
+        "src/**/*"
+    ]
 }
