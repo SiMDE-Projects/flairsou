@@ -1,24 +1,29 @@
 import {
   Entity, Enum, ManyToOne, PrimaryKey, Property,
 } from '@mikro-orm/core';
+import Entite from './Entite';
 
 export enum AccountType {
-    Credit = 'credit',
-    Debit = 'debit',
     Recettes = 'recettes',
-    Depenses = 'depenses'
-}
+    Depenses = 'depenses',
+    Actifs = 'actifs',
+    Passifs = 'passfis',
+    CapitauxPropres = 'capitauxPropres'
+  }
 
 @Entity()
 class Account {
     @PrimaryKey()
-    name!:string
+    name!: string
 
     @Property()
     generic!: boolean
 
     @Enum()
     type!: AccountType
+
+    @ManyToOne()
+    entite!: Entite
 
     @ManyToOne()
     parent?: Account
